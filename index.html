@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftPay - تصميم مواقع إلكترونية احترافية | نصمم لك موقعك بإحترافية</title>
+    <meta name="description" content="نحن في SwiftPay نصمم لك مواقع إلكترونية احترافية. نحول أفكارك إلى واقع رقمي مميز بأحدث التقنيات وأفضل المعايير العالمية">
+    <meta name="keywords" content="تصميم مواقع, تصميم مواقع الكترونية, SwiftPay, موقع احترافي, تطوير مواقع, شركة تصميم مواقع">
+    <meta name="author" content="SwiftPay">
+    <meta property="og:title" content="SwiftPay - تصميم مواقع إلكترونية احترافية">
+    <meta property="og:description" content="نصمم لك موقعك الإلكتروني بإحترافية تامة">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwb9Bg_Uris2H1ebY4Io-r3O-fSMCKwWLIgj1LQdILu5GpUBUHpBD7-oKETuv0PFFUeZcKXSOO2bK0RrYDI7iGiuAVj4Opp3Gbd4ptE6n8cIN7InKjG3MexapUS386iAvQOS-5D1o_6a7azv_UCHdUzFUjlo0fcKECqjAStC3X_X8_8V96lmGjCrpBPKA/s1440/1000005959.webp">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwiftPay",
+      "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwb9Bg_Uris2H1ebY4Io-r3O-fSMCKwWLIgj1LQdILu5GpUBUHpBD7-oKETuv0PFFUeZcKXSOO2bK0RrYDI7iGiuAVj4Opp3Gbd4ptE6n8cIN7InKjG3MexapUS386iAvQOS-5D1o_6a7azv_UCHdUzFUjlo0fcKECqjAStC3X_X8_8V96lmGjCrpBPKA/s1440/1000005959.webp",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "telephone": "+963988086343",
+        "email": "swiftpayswiftpay58@gmail.com"
+      },
+      "url": "https://swiftpay.com",
+      "sameAs": [
+        "https://whatsapp.com/channel/0029VbCFd2g6rsQk9M4bw71G",
+        "https://www.instagram.com/swiftpay.com.io",
+        "https://youtube.com/@swiftpay-t5b"
+      ]
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Variables for Dark/Light Mode */
+        :root {
+            --light-bg: #ffffff;
+            --light-bg-secondary: #f8f9fa;
+            --light-text: #333333;
+            --light-card: #ffffff;
+            --light-border: #e0e0e0;
+
+            --dark-bg: #0a0a0f;
+            --dark-bg-secondary: #14141f;
+            --dark-text: #e0e0e0;
+            --dark-card: #1a1a2e;
+            --dark-border: #2d2d44;
+
+            --primary-color: #1a1a2e;
+            --whatsapp-color: #25D366;
+            --whatsapp-hover: #128C7E;
+            --youtube-color: #FF0000;
+            --youtube-hover: #CC0000;
+            --instagram-gradient: linear-gradient(135deg, #E4405F 0%, #FF7A00 100%);
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --shadow: 0 10px 30px rgba(0,0,0,0.2);
+            --gold-accent: #ffd700;
+
+            --dark-title: #ffffff;
+            --light-title: #000000;
+        }
+
+        body {
+            font-family: 'Cairo', 'Arial', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-weight: 400;
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        body.light-mode {
+            background-color: var(--light-bg);
+            color: var(--light-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: var(--dark-bg-secondary);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+            border-bottom: 1px solid var(--dark-border);
+        }
+
+        body.light-mode header {
+            background: var(--light-bg);
+            border-bottom: 1px solid var(--light-border);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            position: relative;
+        }
+
+        .logo-wrapper {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--gold-accent);
+            transition: transform 0.3s;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            pointer-events: none;
+        }
+
+        .logo-wrapper:hover {
+            transform: scale(1.1);
+        }
+
+        .logo-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 900;
+            color: var(--gold-accent);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            transition: color 0.3s;
+        }
+
+        .logo:hover {
+            color: var(--whatsapp-color);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            margin: 0 15px;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1002;
+        }
+
+        .theme-toggle svg {
+            width: 28px;
+            height: 28px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .theme-toggle:hover svg {
+            transform: scale(1.15) rotate(15deg);
+        }
+
+        .bulb-icon {
+            fill: #A0A0A0;
+            transition: all 0.4s ease;
+        }
+
+        body.light-mode .bulb-icon {
+            fill: #FFD700;
+            filter: drop-shadow(0 0 12px #FFD700) drop-shadow(0 0 24px #FFD700);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--dark-text);
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        body.light-mode .menu-toggle span {
+            background-color: var(--light-text);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 700;
+            transition: color 0.3s;
+            position: relative;
+            font-size: 16px;
+        }
+
+        body.light-mode .nav-menu a {
+            color: var(--light-text);
+        }
+
+        .nav-menu a:hover {
+            color: var(--gold-accent);
+        }
+
+        .whatsapp-button {
+            background: linear-gradient(135deg, var(--whatsapp-color) 0%, var(--whatsapp-hover) 100%);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .whatsapp-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        .social-button {
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            transition: all 0.3s;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .youtube-button {
+            background: linear-gradient(135deg, var(--youtube-color) 0%, var(--youtube-hover) 100%);
+        }
+
+        .youtube-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 0, 0, 0.5);
+        }
+
+        .instagram-button {
+            background: var(--instagram-gradient);
+        }
+
+        .instagram-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(228, 64, 95, 0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0f 100%);
+            padding: 180px 0 120px;
+            text-align: center;
+            color: var(--dark-text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body.light-mode .hero {
+            background: var(--gradient-primary);
+            color: var(--light-text);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+            font-weight: 900;
+            line-height: 1.3;
+            color: var(--dark-title);
+        }
+
+        body.light-mode .hero h1 {
+            color: var(--light-title);
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+            font-weight: 400;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--whatsapp-color) 0%, var(--whatsapp-hover) 100%);
+            color: white;
+            padding: 18px 50px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            animation: fadeInUp 1s ease-out 0.6s both;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background-color: var(--dark-bg-secondary);
+            transition: background-color 0.4s ease;
+        }
+
+        body.light-mode .services {
+            background-color: var(--light-bg-secondary);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 60px;
+            position: relative;
+            font-weight: 900;
+            color: var(--dark-title);
+        }
+
+        body.light-mode .section-title {
+            color: var(--light-title);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: var(--gradient-primary);
+            border-radius: 3px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            background-color: var(--dark-card);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--dark-border);
+        }
+
+        body.light-mode .service-card {
+            background-color: var(--light-card);
+            border: 1px solid var(--light-border);
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+        }
+
+        .service-card h3 {
+            font-size: 26px;
+            margin-bottom: 25px;
+            color: var(--dark-title);
+            font-weight: 700;
+        }
+
+        body.light-mode .service-card h3 {
+            color: var(--light-title);
+        }
+
+        /* Portfolio Section - تصميم احترافي */
+        .portfolio {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+            transition: background 0.4s ease;
+        }
+
+        body.light-mode .portfolio {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .portfolio-card {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            transition: all 0.4s ease;
+            background: var(--dark-card);
+            border: 1px solid var(--dark-border);
+        }
+
+        body.light-mode .portfolio-card {
+            background: var(--light-card);
+            border: 1px solid var(--light-border);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+            border-color: var(--gold-accent);
+        }
+
+        .portfolio-image-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/10;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1e1e2e 0%, #2d2d44 100%);
+        }
+
+        body.light-mode .portfolio-image-wrapper {
+            background: linear-gradient(135deg, #e0e0e0 0%, #f0f0f0 100%);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-card:hover .portfolio-image {
+            transform: scale(1.03);
+        }
+
+        .portfolio-content {
+            padding: 25px 30px 30px;
+        }
+
+        .portfolio-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-tag {
+            display: inline-block;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .portfolio-year {
+            color: var(--dark-text);
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        body.light-mode .portfolio-year {
+            color: var(--light-text);
+        }
+
+        .portfolio-card h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--dark-title);
+            font-weight: 900;
+        }
+
+        body.light-mode .portfolio-card h3 {
+            color: var(--light-title);
+        }
+
+        .portfolio-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--whatsapp-color) 0%, var(--whatsapp-hover) 100%);
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .portfolio-link:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+            gap: 15px;
+        }
+
+        .portfolio-link svg {
+            transition: transform 0.3s;
+        }
+
+        /* Browser Mockup for Project 3 */
+        .browser-mockup {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: #2d2d44;
+            border-radius: 8px 8px 0 0;
+            overflow: hidden;
+        }
+
+        body.light-mode .browser-mockup {
+            background: #e0e0e0;
+        }
+
+        .browser-header {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            background: rgba(0,0,0,0.3);
+            gap: 8px;
+        }
+
+        body.light-mode .browser-header {
+            background: rgba(0,0,0,0.05);
+        }
+
+        .browser-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .browser-dot.red { background: #ff5f57; }
+        .browser-dot.yellow { background: #febc2e; }
+        .browser-dot.green { background: #28c840; }
+
+        .browser-address {
+            flex: 1;
+            margin: 0 16px;
+            padding: 6px 12px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            font-size: 11px;
+            color: #888;
+            text-align: center;
+        }
+
+        body.light-mode .browser-address {
+            background: rgba(255,255,255,0.8);
+            color: #666;
+        }
+
+        .browser-content {
+            position: relative;
+            width: 100%;
+            height: calc(100% - 40px);
+            overflow: hidden;
+        }
+
+        .browser-content img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .calc-preview {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            font-family: 'Courier New', monospace;
+        }
+
+        body.light-mode .calc-preview {
+            background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+            color: #333;
+        }
+
+        .calc-screen {
+            width: 80%;
+            height: 60px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 15px;
+            font-size: 24px;
+            font-weight: bold;
+            border: 2px solid rgba(255,215,0,0.3);
+        }
+
+        body.light-mode .calc-screen {
+            background: rgba(0,0,0,0.05);
+            border-color: rgba(102, 126, 234, 0.3);
+        }
+
+        .calc-buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            width: 80%;
+        }
+
+        .calc-btn {
+            aspect-ratio: 1;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .calc-btn.accent {
+            background: rgba(255,215,0,0.3);
+            color: #ffd700;
+        }
+
+        /* Importance Section */
+        .importance {
+            padding: 100px 0;
+            background-color: var(--dark-bg);
+            transition: background-color 0.4s ease;
+        }
+
+        body.light-mode .importance {
+            background-color: var(--light-bg);
+        }
+
+        .importance-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .importance-item {
+            background-color: var(--dark-card);
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+            border: 1px solid var(--dark-border);
+        }
+
+        body.light-mode .importance-item {
+            background-color: var(--light-card);
+            border: 1px solid var(--light-border);
+        }
+
+        .importance-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .importance-item h4 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--dark-title);
+            font-weight: 700;
+        }
+
+        body.light-mode .importance-item h4 {
+            color: var(--light-title);
+        }
+
+        /* Problems Section */
+        .problems {
+            padding: 100px 0;
+            background-color: var(--dark-bg-secondary);
+            transition: background-color 0.4s ease;
+        }
+
+        body.light-mode .problems {
+            background-color: var(--light-bg-secondary);
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .problem-card {
+            background-color: var(--dark-card);
+            padding: 40px;
+            border-radius: 20px;
+            border-right: 5px solid var(--whatsapp-color);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        body.light-mode .problem-card {
+            background-color: var(--light-card);
+        }
+
+        .problem-card:hover {
+            transform: translateX(-10px);
+        }
+
+        .problem-card h3 {
+            font-size: 26px;
+            margin-bottom: 25px;
+            color: var(--dark-title);
+            font-weight: 700;
+        }
+
+        body.light-mode .problem-card h3 {
+            color: var(--light-title);
+        }
+
+        /* Social Media Section */
+        .social-media {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #14141f 0%, #0a0a0f 100%);
+            text-align: center;
+            color: var(--dark-text);
+            transition: background 0.4s ease;
+        }
+
+        body.light-mode .social-media {
+            background: var(--gradient-primary);
+            color: var(--light-text);
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background-color: var(--dark-bg);
+            text-align: center;
+            transition: background-color 0.4s ease;
+        }
+
+        body.light-mode .contact {
+            background-color: var(--light-bg);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+            margin-bottom: 40px;
+        }
+
+        .contact-item {
+            background: var(--dark-card);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+            border: 1px solid var(--dark-border);
+        }
+
+        body.light-mode .contact-item {
+            background: var(--light-card);
+            border: 1px solid var(--light-border);
+        }
+
+        .contact-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .contact-item h3 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: var(--dark-title);
+            font-weight: 700;
+        }
+
+        body.light-mode .contact-item h3 {
+            color: var(--light-title);
+        }
+
+        .contact-item p {
+            color: var(--dark-text);
+            margin-bottom: 25px;
+            font-size: 17px;
+        }
+
+        body.light-mode .contact-item p {
+            color: var(--light-text);
+        }
+
+        .email-link {
+            color: var(--whatsapp-color);
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        .email-link:hover {
+            color: var(--gold-accent);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg-secondary);
+            color: var(--dark-text);
+            text-align: center;
+            padding: 50px 0;
+            border-top: 1px solid var(--dark-border);
+            transition: all 0.4s ease;
+        }
+
+        body.light-mode footer {
+            background: var(--primary-color);
+            color: var(--light-text);
+            border-top: 1px solid var(--light-border);
+        }
+
+        footer p {
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .footer-links a {
+            color: var(--gold-accent);
+            text-decoration: none;
+            margin: 0 20px;
+            transition: color 0.3s;
+            font-weight: 700;
+        }
+
+        .footer-links a:hover {
+            color: var(--whatsapp-color);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: var(--dark-bg-secondary);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                padding: 20px 0;
+                gap: 20px;
+                box-shadow: var(--shadow);
+            }
+
+            body.light-mode .nav-menu {
+                background: var(--light-bg);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .hero {
+                padding: 150px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <div class="logo-wrapper">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwb9Bg_Uris2H1ebY4Io-r3O-fSMCKwWLIgj1LQdILu5GpUBUHpBD7-oKETuv0PFFUeZcKXSOO2bK0RrYDI7iGiuAVj4Opp3Gbd4ptE6n8cIN7InKjG3MexapUS386iAvQOS-5D1o_6a7azv_UCHdUzFUjlo0fcKECqjAStC3X_X8_8V96lmGjCrpBPKA/s1440/1000005959.webp" alt="SwiftPay Logo" class="logo-img">
+                </div>
+                <a href="#" class="logo">SwiftPay</a>
+            </div>
+
+            <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع الليلي/النهاري">
+                <svg class="bulb-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zm2 11.5V16h-4v-2.5c-1.69-.69-3-2.36-3-4.5 0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.14-1.31 3.81-3 4.5zM9 18h6v1c0 .55-.45 1-1 1h-4c-.55 0-1-.45-1-1v-1z"/>
+                    <rect x="11" y="19" width="2" height="3" rx="1"/>
+                </svg>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#portfolio">أعمالنا</a></li>
+                <li><a href="#importance">لماذا الموقع الإلكتروني مهم؟</a></li>
+                <li><a href="#problems">مشاكل المواقع التجارية</a></li>
+                <li><a href="#social">تواصل معنا</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+                <li><a href="https://wa.me/963988086343" class="whatsapp-button" target="_blank">WhatsApp</a></li>
+            </ul>
+
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>نصمم لك موقعك الإلكتروني بإحترافية تامة</h1>
+                <p>نحول أفكارك إلى واقع رقمي مميز بأحدث التقنيات وأفضل المعايير العالمية</p>
+                <a href="https://wa.me/963988086343" class="cta-button" target="_blank">
+                    ابدأ مشروعك الآن
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">خدماتنا</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>تصميم مواقع إلكترونية</h3>
+                    <p>مواقع modern و responsive تعمل على جميع الأجهزة مع تصميم يعكس هوية علامتك التجارية</p>
+                </div>
+                <div class="service-card">
+                    <h3>صيانة ودعم فني</h3>
+                    <p>دعم تقني مستمر وتحديثات دورية لضمان أداء موقعك بكفاءة دائمة</p>
+                </div>
+                <div class="service-card">
+                    <h3>استضافة مواقع</h3>
+                    <p>استضافة سريعة وآمنة مع نسخ احتياطية يومية وحماية من الهجمات الإلكترونية</p>
+                </div>
+                <div class="service-card">
+                    <h3>تحسين SEO</h3>
+                    <p>تحسين موقعك ليتناسب مع محركات البحث ويظهر في النتائج الأولى لزيادة الزوار والعملاء</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section - تصميم احترافي -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">أعمالنا</h2>
+            <div class="portfolio-grid">
+                <!-- Project 1: Al-Kher -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image-wrapper">
+                        <img src="https://image.thum.io/get/width/1200/crop/750/https://alkher.netlify.app/" 
+                             alt="الخير للتجارة والمقاولات" 
+                             class="portfolio-image">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-meta">
+                            <span class="portfolio-tag">موقع شركة مقاولات</span>
+                            <span class="portfolio-year">2026</span>
+                        </div>
+                        <h3>الخير للتجارة والمقاولات</h3>
+                        <a href="https://alkher.netlify.app/" class="portfolio-link" target="_blank">
+                            زيارة الموقع 
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Ruya -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image-wrapper">
+                        <img src="https://image.thum.io/get/width/1200/crop/750/https://swiftpaye.github.io/roya/" 
+                             alt="رؤيا لتصميم الشعارات" 
+                             class="portfolio-image">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-meta">
+                            <span class="portfolio-tag">خدمة تصميم شعارات</span>
+                            <span class="portfolio-year">2026</span>
+                        </div>
+                        <h3>رؤيا | Ruya</h3>
+                        <a href="https://swiftpaye.github.io/roya/" class="portfolio-link" target="_blank">
+                            زيارة الموقع 
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3: ClakMaster Pro - تصميم معاينة محسن -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image-wrapper">
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <div class="browser-dot red"></div>
+                                <div class="browser-dot yellow"></div>
+                                <div class="browser-dot green"></div>
+                                <div class="browser-address">swiftpaye.github.io/clakmaster-pro</div>
+                            </div>
+                            <div class="browser-content">
+                                <div class="calc-preview">
+                                    <div class="calc-screen">1,234.56</div>
+                                    <div class="calc-buttons">
+                                        <div class="calc-btn accent">AC</div>
+                                        <div class="calc-btn">±</div>
+                                        <div class="calc-btn">%</div>
+                                        <div class="calc-btn accent">÷</div>
+                                        <div class="calc-btn">7</div>
+                                        <div class="calc-btn">8</div>
+                                        <div class="calc-btn">9</div>
+                                        <div class="calc-btn accent">×</div>
+                                        <div class="calc-btn">4</div>
+                                        <div class="calc-btn">5</div>
+                                        <div class="calc-btn">6</div>
+                                        <div class="calc-btn accent">-</div>
+                                        <div class="calc-btn">1</div>
+                                        <div class="calc-btn">2</div>
+                                        <div class="calc-btn">3</div>
+                                        <div class="calc-btn accent">+</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-meta">
+                            <span class="portfolio-tag">تطبيق ويب</span>
+                            <span class="portfolio-year">2026</span>
+                        </div>
+                        <h3>ClakMaster Pro</h3>
+                        <p style="margin-bottom: 15px; font-size: 14px; opacity: 0.8;">آلة حاسبة احترافية متكاملة مع واجهة مستخدم عصرية</p>
+                        <a href="https://swiftpaye.github.io/clakmaster-pro/" class="portfolio-link" target="_blank">
+                            زيارة الموقع 
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Importance Section -->
+    <section class="importance" id="importance">
+        <div class="container">
+            <h2 class="section-title">لماذا يحتاج نشاطك التجاري إلى موقع إلكتروني؟</h2>
+            <div class="importance-content">
+                <div class="importance-item">
+                    <h4>تواجد 24/7</h4>
+                    <p>موقعك يعمل على مدار الساعة لخدمة عملائك حتى في أوقات غير العمل</p>
+                </div>
+                <div class="importance-item">
+                    <h4>مصداقية وثقة</h4>
+                    <p>موقعك الإلكتروني هو وجهتك الرقمية التي تبني الثقة مع عملائك من أول نظرة</p>
+                </div>
+                <div class="importance-item">
+                    <h4>وصول عالمي</h4>
+                    <p>اختراق أسواق جديدة وتوسيع قاعدة عملائك بلا حلود جغرافية</p>
+                </div>
+                <div class="importance-item">
+                    <h4>أداة تسويقية</h4>
+                    <p>منصة تسويقية متكاملة لترويج منتجاتك وخدماتك بفعالية عالية</p>
+                </div>
+                <div class="importance-item">
+                    <h4>توفير التكاليف</h4>
+                    <p>reduce التكاليف التشغيلية بشكل كبير من خلال الأتمتة والعملية الرقمية</p>
+                </div>
+                <div class="importance-item">
+                    <h4>بيانات العملاء</h4>
+                    <p>جمع بيانات قيمة لتحليل سلوك العملاء وتحسين استراتيجيتك</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="problems" id="problems">
+        <div class="container">
+            <h2 class="section-title">مشاكل المواقع التجارية الشائعة التي نحلها</h2>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <h3>تصميم غير متجاوب</h3>
+                    <p>حلول: تصميم يتناسب مع جميع الشاشات والأجهزة بشكل مثالي</p>
+                </div>
+                <div class="problem-card">
+                    <h3>تحميل بطيء</h3>
+                    <p>حلول: تحسين سرعة الموقع لتكون أقل من 3 ثوانٍ لكل صفحة</p>
+                </div>
+                <div class="problem-card">
+                    <h3>تجربة مستخدم سيئة</h3>
+                    <p>حلول: واجهات بديهية وسهلة الاستخدام تزيد من نسبة التحويل</p>
+                </div>
+                <div class="problem-card">
+                    <h3>غير متوافق مع محركات البحث</h3>
+                    <p>حلول: بناء الموقع وفق أحدث معايير لضمان </p>
+                </div>
+                <div class="problem-card">
+                    <h3>أمان ضعيف</h3>
+                    <p>حلول: شهادات SSL، حماية من الاختراق، وفحوصات أمنية دورية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-media" id="social">
+        <div class="container">
+            <h2 class="section-title">تابعنا على منصات التواصل الاجتماعي</h2>
+            <div class="social-buttons">
+                <a href="https://whatsapp.com/channel/0029VbCFd2g6rsQk9M4bw71G" class="social-button whatsapp-button" target="_blank">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                    قناة WhatsApp
+                </a>
+                <a href="https://www.instagram.com/swiftpay.com.io" class="social-button instagram-button" target="_blank">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
+                    </svg>
+                    Instagram
+                </a>
+                <a href="https://youtube.com/@swiftpay-t5b" class="social-button youtube-button" target="_blank">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                    YouTube
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">تواصل معنا</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h3>WhatsApp</h3>
+                    <p>للاستفسارات السريعة والمشاريع العاجلة</p>
+                    <a href="https://wa.me/963988086343" class="whatsapp-button" target="_blank">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        +963 988 086 343
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <h3>البريد الإلكتروني</h3>
+                    <p>للاستشارات التقنية والمشاريع الكبيرة</p>
+                    <a href="mailto:swiftpayswiftpay58@gmail.com" class="email-link">
+                        swiftpayswiftpay58@gmail.com
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <h3>خدمة العملاء</h3>
+                    <p>وقت الاستجابة: أقل من ساعة خلال أوقات العمل</p>
+                    <p style="margin-top: 15px 10 مساءً</p>
+                </div>
+            </div>
+            <a href="https://wa.me/963988086343" class="cta-button" target="_blank">
+                ابدأ مشروعك الآن
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 SwiftPay. جميع الحقوق محفوظة.</p>
+            <div class="footer-links" style="margin-top: 20px;">
+                <a href="#services">خدماتنا</a>
+                <a href="#portfolio">أعمالنا</a>
+                <a href="#contact">اتصل بنا</a>
+                <a href="#social">تواصل اجتماعي</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Theme toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        if (currentTheme === 'light') {
+            body.classList.add('light-mode');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            const theme = body.classList.contains('light-mode') ? 'light' : 'dark';
+            localStorage.setItem('theme', theme);
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(20, 20, 31, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = '';
+                header.style.backdropFilter = '';
+            }
+        });
+
+        // Logo protection
+        document.addEventListener('DOMContentLoaded', function() {
+            const logoWrapper = document.querySelector('.logo-wrapper');
+
+            logoWrapper.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                return false;
+            });
+
+            logoWrapper.addEventListener('mousedown', function(e) {
+                if (e.button === 2) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+
+            logoWrapper.addEventListener('dragstart', function(e) {
+                e.preventDefault();
+                return false;
+            });
+
+            logoWrapper.addEventListener('selectstart', function(e) {
+                e.preventDefault();
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>
